@@ -131,13 +131,5 @@ best_image, generated_images = training_loop('content.jpg', 'style.jpg')
 
 # display image
 display_image(best_image)
-
-
-# saving the best image generated
-keras.preprocessing.image.save_img( f"best_generated_image time:{time.time()}.jpg", cv2.cvtColor(arr, cv2.COLOR_BGR2RGB))
-
-
-
-
-
+plt.savefig('best_image.png', dpi=800, bbox_inches='tight')    # saving image
 
